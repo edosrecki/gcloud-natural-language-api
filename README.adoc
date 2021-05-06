@@ -1,0 +1,42 @@
+== Google Cloud Natural Language API
+
+This code demonstrates how to use Google Cloud Natural Language API with Node.JS for:
+
+* sentiment analysis
+* entity analysis
+* syntax analysis
+* content classification
+
+=== Requirements
+* https://fishshell.com/[`fish`]
+* https://cloud.google.com/sdk/docs/install[`gcloud`]
+* https://github.com/nvm-sh/nvm[`nvm`]
+
+[source,shell]
+----
+# Create gcloud configuration
+gcloud config configurations create '<CONFIGURATION_NAME>'
+gcloud auth login
+gcloud config set core/project '<PROJECT_ID>'
+----
+
+=== Setup
+
+[source,shell]
+----
+setenv GCLOUD_CONFIGURATION_NAME '<CONFIGURATION_NAME>' 
+
+make up
+----
+
+=== Run
+[source,shell]
+----
+make run
+----
+
+=== Teardown
+[source,shell]
+----
+make down
+----
